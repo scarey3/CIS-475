@@ -6,7 +6,6 @@ PORT = 50000
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     # Connect to the server
     s.connect((HOST, PORT))
-    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
     while True:
         # Read a sequence of characters from the user
